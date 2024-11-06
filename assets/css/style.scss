@@ -1,0 +1,20 @@
+@import 
+"./scss/responsive",
+"./scss/colors",
+"./scss/typography",
+"./scss/spacing",
+"./scss/reset",
+"./scss/layout",
+"./scss/animations",
+"./scss/menu",
+"./scss/home",
+"./scss/about",
+"./scss/intro",
+"./scss/projects",
+"./scss/footer";
+
+
+.grid-layout {
+    @include grid-layout();
+  }
+  

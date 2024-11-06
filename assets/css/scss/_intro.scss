@@ -1,0 +1,107 @@
+#intro {
+    padding: 100px 48px;
+    position: relative;
+    .grid-layout {
+        position: relative;
+
+        .bloco-intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .freelance {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                height: 240px;
+                max-width: 540px;
+                gap: 30px;
+
+                .title-freelance {
+                    color: #f2eeff;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                }
+
+                h1 {
+                    color: #fff;
+                    font-family: Oxanium;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 133%; /* 53.2px */
+                }
+
+                p {
+                    color: #93939f;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 200%; /* 36px */
+                }
+            }
+        }
+
+        svg {
+            width: 500px;
+            transform-origin: 0% 50%;
+            animation: blur 3s infinite ease-in-out;
+            .circuit {
+                stroke-dasharray: 100;
+                stroke-dashoffset: 400;
+                animation: dash 3s infinite;
+                stroke: #6631ff;
+            }
+
+            @keyframes dash {
+                to {
+                    stroke-dashoffset: 5;
+                }
+            }
+        }
+
+        @keyframes blur {
+            50% {
+                filter: drop-shadow(0px 0px 80px #6631ff);
+            }
+        }
+    }
+}
+
+@include responsive(m) {
+    #intro {
+        padding: 100px 20px;
+        .grid-layout {
+            .bloco-intro {
+                flex-direction: column;
+                .freelance {
+                    h1 {
+                        font-size: 32px;
+                    }
+                }
+
+                svg {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@include responsive(s) {
+    #intro {
+        padding: 50px 20px;
+        .grid-layout {
+            .bloco-intro {
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

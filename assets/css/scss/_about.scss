@@ -1,0 +1,84 @@
+#about {
+    padding: 200px 48px;
+
+    .grid-layout {
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .me {
+                width: 461px;
+                height: 601px;
+            }
+
+            .about-text {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+                max-width: 520px;
+                h1 {
+                    color: #fff;
+                    font-family: Oxanium;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 133%; /* 53.2px */
+                }
+
+                p {
+                    color: #93939f;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 200%; /* 36px */
+                }
+
+                .redes-sociais {
+                    display: flex;
+                    gap: 28px;
+
+                    .bloco-redes-sociais {
+                        display: flex;
+                        padding: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 5px;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        cursor: pointer;
+                        transition: border 0.3s ease;
+                    }
+                    .bloco-redes-sociais:hover {
+                        border-color: #6631ff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(m) {
+    #about {
+        padding: 50px 20px;
+        .grid-layout {
+            .about {
+                justify-content: center;
+                flex-direction: column;
+
+                .me {
+                    width: 100%;
+                    padding-bottom: 50px;
+                }
+
+                .about-text {
+                    h1 {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

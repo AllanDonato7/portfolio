@@ -1,0 +1,31 @@
+footer {
+   
+    .grid-layout {
+        padding: 30px;
+        .footer-spacebet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                color: #93939F;
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+@include responsive(s) {
+    footer {
+        .grid-layout {
+            .footer-spacebet {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    }
+}

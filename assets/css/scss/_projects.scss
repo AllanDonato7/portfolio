@@ -1,0 +1,128 @@
+#projects {
+    padding: 100px 48px;
+
+    .grid-layout {
+        .projects-intro {
+            .projects-title {
+                color: #f2eeff;
+                font-family: Oxanium;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                padding-bottom: 30px;
+            }
+
+            .projects-cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .card {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    max-width: 529px;
+                    gap: 30px;
+                    padding: 30px;
+
+                    img {
+                        width: 200px;
+                        height: 130px;
+                        border-radius: 4px;
+                    }
+
+                    .text-card {
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        span {
+                            display: flex;
+                            height: 26px;
+                            padding: 10px;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            border-radius: 4px;
+                            background: rgba(30, 107, 222, 0.45);
+                            color: #f2eeff;
+                            font-family: Inter;
+                            font-size: 11.6px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+
+                        h4 {
+                            color: #f2eeff;
+                            font-family: Oxanium;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 133%; /* 31.92px */
+                        }
+
+                        p {
+                            color: #93939f;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 180%; /* 25.2px */
+                        }
+                    }
+                }
+
+                .card:hover {
+                    transition: 0.2s ease-in-out;
+                    background: rgba(228, 219, 255, 0.05);
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    border-radius: 4px;
+                }
+
+                .card:hover h4 {
+                    transition: 0.2s ease-in-out;
+                    color: #ffed30;
+                }
+            }
+        }
+    }
+}
+
+@include responsive(m) {
+    #projects {
+        padding: 50px 20px;
+        .grid-layout {
+            .projects-intro {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .projects-title {
+                    font-size: 32px;
+                }
+
+                .projects-cards {
+                    grid-template-columns: auto;
+
+                    .card {
+                        flex-direction: column;
+                        padding: 0 0 30px 0;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .card:hover {
+                        display: none;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
